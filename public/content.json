@@ -48,7 +48,7 @@
     "intro": "A few projects I've shipped. Click any card for the detail.",
     "items": [
       {
-        "image": "",
+        "image": "/portfolio/images/meta-capi.png",
         "title": "Meta Conversions API integration",
         "summary": "Recovers ad conversions lost to iOS privacy changes — accurately, and without exposing customer data.",
         "tags": ["Python", "Meta CAPI", "GDPR"],
@@ -57,7 +57,7 @@
         "link_label": "View repo"
       },
       {
-        "image": "",
+        "image": "/portfolio/images/n8n-pipeline.png",
         "title": "n8n lead-capture pipeline",
         "summary": "Turns web leads into trustworthy CRM records — validated, consent-gated, and never silently dropped.",
         "tags": ["n8n", "Webhooks", "HubSpot"],
@@ -66,7 +66,7 @@
         "link_label": "View repo"
       },
       {
-        "image": "",
+        "image": "/portfolio/images/student-crm.png",
         "title": "EduFlow — student recruitment CRM",
         "summary": "A role-based CRM that tracks students from first enquiry to enrolment. Live demo you can click through.",
         "tags": ["TypeScript", "React", "CRM"],
