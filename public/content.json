@@ -49,30 +49,30 @@
     "items": [
       {
         "image": "",
-        "title": "Project one",
-        "summary": "One line on what it did and the result it delivered.",
-        "tags": ["Automation"],
-        "description": "Add the full story here: the problem, what you built, the key decisions, and the measurable outcome. This is what shows when someone opens the card.",
-        "link_url": "",
-        "link_label": ""
+        "title": "Meta Conversions API integration",
+        "summary": "Recovers ad conversions lost to iOS privacy changes — accurately, and without exposing customer data.",
+        "tags": ["Python", "Meta CAPI", "GDPR"],
+        "description": "When iOS 14 broke pixel tracking, ad budgets started flying blind. This production integration sends conversions to Meta server-side, so your attribution survives. It's built around the two things example code ignores: deterministic event IDs so retries can never double-count revenue, and PII hashed at the boundary so plaintext customer data lives in exactly one audited place. Backoff on rate limits, PII-safe logging, 10/10 tests passing.",
+        "link_url": "https://github.com/GolamRabbani99/meta-capi-integration",
+        "link_label": "View repo"
       },
       {
         "image": "",
-        "title": "Project two",
-        "summary": "One line on what it did and the result it delivered.",
-        "tags": ["Integration"],
-        "description": "Add the full story here: the problem, what you built, the key decisions, and the measurable outcome. This is what shows when someone opens the card.",
-        "link_url": "",
-        "link_label": ""
+        "title": "n8n lead-capture pipeline",
+        "summary": "Turns web leads into trustworthy CRM records — validated, consent-gated, and never silently dropped.",
+        "tags": ["n8n", "Webhooks", "HubSpot"],
+        "description": "A lead-capture workflow for businesses that can't afford to lose an enquiry. Bad data is rejected with a 400 before it ever touches the CRM; GDPR consent is enforced and timestamped for audit; CRM writes are idempotent, so a double-submitted form never creates a duplicate contact. If anything fails, an error branch pages a human on Slack with a traceable enquiry ID for replay — no lead ever vanishes.",
+        "link_url": "https://github.com/GolamRabbani99/n8n-lead-pipline",
+        "link_label": "View repo"
       },
       {
         "image": "",
-        "title": "Project three",
-        "summary": "One line on what it did and the result it delivered.",
-        "tags": ["Pipeline"],
-        "description": "Add the full story here: the problem, what you built, the key decisions, and the measurable outcome. This is what shows when someone opens the card.",
-        "link_url": "",
-        "link_label": ""
+        "title": "EduFlow — student recruitment CRM",
+        "summary": "A role-based CRM that tracks students from first enquiry to enrolment. Live demo you can click through.",
+        "tags": ["TypeScript", "React", "CRM"],
+        "description": "A recruitment CRM built for education agencies: role-based access for counsellors, managers and admins, a clear pipeline from first enquiry to enrolment, and dashboards that show exactly where students stall. Built with React and a lightweight SQLite backend — with a live demo so a prospect can try it before a single call.",
+        "link_url": "https://golamrabbani99.github.io/student-crm/",
+        "link_label": "Live demo"
       }
     ]
   },
