@@ -1,0 +1,86 @@
+# Pages CMS configuration (https://pagescms.org)
+# Defines the visual editor for content.json + the images folder.
+# Only collaborators on this GitHub repo can sign in and save changes.
+media:
+  - name: images
+    label: Images
+    input: images
+    output: /portfolio/images
+    extensions: [png, jpg, jpeg, webp, gif, svg]
+
+content:
+  - name: site
+    label: Site content
+    type: file
+    path: content.json
+    format: json
+    fields:
+      - name: hero
+        label: Hero section
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow line, type: string }
+          - name: heading
+            label: Headline (each chunk; tick Accent to highlight in orange)
+            type: object
+            list: true
+            fields:
+              - { name: text, label: Text, type: string }
+              - { name: accent, label: Accent, type: boolean }
+          - { name: sub, label: Sub-headline (use `backticks` for code style), type: text }
+      - name: metrics
+        label: Metrics
+        type: object
+        list: true
+        fields:
+          - { name: prefix, label: Prefix (e.g. ~ or £), type: string }
+          - { name: count, label: Number, type: string }
+          - { name: suffix, label: Suffix (e.g. % or ×), type: string }
+          - { name: from, label: Count-up start (optional), type: string }
+          - { name: label, label: Caption, type: text }
+      - name: projects
+        label: Projects
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: stack, label: Tech tags, type: string, list: true }
+          - { name: description, label: Description, type: text }
+          - name: decisions
+            label: Decision bullets
+            type: object
+            list: true
+            fields:
+              - { name: tag, label: "Tag (e.g. [DEDUP])", type: string }
+              - { name: text, label: Text, type: string }
+          - { name: repo_url, label: Repository URL, type: string }
+          - { name: image, label: Screenshot (optional), type: image }
+      - name: principles
+        label: Principles
+        type: object
+        list: true
+        fields:
+          - { name: code, label: "Code label (e.g. [IDEMPOTENT])", type: string }
+          - { name: lead, label: Lead sentence (bold), type: string }
+          - { name: body, label: Body, type: text }
+      - name: about
+        label: About
+        type: object
+        fields:
+          - { name: photo, label: Profile photo (optional), type: image }
+          - { name: paragraphs, label: Paragraphs, type: text, list: true }
+          - name: cred
+            label: Credentials panel
+            type: object
+            fields:
+              - { name: status, label: Status, type: string }
+              - { name: education, label: Education lines, type: string, list: true }
+              - { name: stack, label: Stack, type: text }
+              - { name: base, label: Base location, type: string }
+      - name: contact
+        label: Contact
+        type: object
+        fields:
+          - { name: email, label: Email, type: string }
+          - { name: phone, label: Phone, type: string }
+          - { name: linkedin, label: LinkedIn URL, type: string }

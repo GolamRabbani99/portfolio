@@ -282,3 +282,13 @@
 
 /* utility (replaces inline style for CSP hygiene) */
 [data-gap]{margin-bottom:2rem}
+
+/* ---------- CMS-managed images (optional) ---------- */
+.about-photo{
+  display:block;width:100%;border-radius:12px;
+  border:1px solid var(--panel-edge);margin-bottom:1.4rem;
+}
+.project-thumb{
+  display:block;width:100%;aspect-ratio:16/9;object-fit:cover;
+  border-radius:10px;border:1px solid var(--panel-edge);margin-bottom:.4rem;
+}

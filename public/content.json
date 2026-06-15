@@ -1,0 +1,74 @@
+{
+  "hero": {
+    "eyebrow": "AI AUTOMATION ENGINEER — LONDON",
+    "heading": [
+      { "text": "Automation you can trust with ", "accent": false },
+      { "text": "money", "accent": true },
+      { "text": " and ", "accent": false },
+      { "text": "customer data", "accent": true },
+      { "text": ".", "accent": false }
+    ],
+    "sub": "I build production workflows in `n8n` and `Python` for marketing and operations — idempotent by design, GDPR-aware by default, and never silently failing. Five years across digital marketing, paid acquisition, and systems security."
+  },
+  "metrics": [
+    { "count": "20", "prefix": "~", "suffix": "%", "label": "attribution data recovered after iOS 14+ via server-side Meta CAPI integration" },
+    { "count": "3", "prefix": "~", "suffix": "×", "label": "blended ROAS on student-enrolment campaigns (£3–4k/mo spend → ~£10k/mo commission)" },
+    { "count": "700", "prefix": "£", "suffix": "", "label": "cost per enrolment against £2,000 conversion value — profitable acquisition by design" },
+    { "count": "0", "from": "14", "prefix": "", "suffix": "", "label": "duplicate conversions possible — deterministic event IDs make every retry idempotent" }
+  ],
+  "projects": [
+    {
+      "title": "Meta Conversions API — server-side tracking",
+      "stack": ["Python", "Graph API", "SHA-256", "pytest"],
+      "description": "Production CAPI implementation that recovers conversions lost to iOS privacy changes — built around the two problems example code ignores: double counting and PII custody.",
+      "decisions": [
+        { "tag": "[DEDUP]", "text": "deterministic event IDs — Pixel + server dedupe, retries can't double-count" },
+        { "tag": "[GDPR]", "text": "hash-at-the-boundary — plaintext PII exists in exactly one audited function" },
+        { "tag": "[RESILIENT]", "text": "exponential backoff on rate limits · PII-safe logging · 10/10 tests passing" }
+      ],
+      "repo_url": "https://github.com/GolamRabbani99/meta-capi-integration",
+      "image": ""
+    },
+    {
+      "title": "n8n lead pipeline — capture to CRM",
+      "stack": ["n8n", "Webhooks", "HubSpot", "Slack"],
+      "description": "Lead intake that's trustworthy, not just automatic: validation and consent gating at the door, idempotent CRM writes, and failures that alert a human instead of vanishing.",
+      "decisions": [
+        { "tag": "[VALIDATE]", "text": "reject bad data with a 400 before it ever touches the CRM" },
+        { "tag": "[CONSENT]", "text": "GDPR consent enforced in the pipeline, timestamp stored for audit" },
+        { "tag": "[NO-SILENCE]", "text": "error branch alerts Slack with a traceable enquiry ID for replay" }
+      ],
+      "repo_url": "https://github.com/GolamRabbani99/n8n-lead-pipline",
+      "image": ""
+    }
+  ],
+  "principles": [
+    { "code": "[IDEMPOTENT]", "lead": "Every retry is harmless.", "body": "Deterministic IDs, upserts keyed on stable references — a double-submitted form or a network retry can never create a duplicate contact or inflate a revenue metric." },
+    { "code": "[BOUNDARY]", "lead": "PII is hashed where it enters.", "body": "Customer data is normalised and SHA-256 hashed in one audited place; downstream code, payloads, and logs never see plaintext. Data minimisation as architecture, not policy." },
+    { "code": "[FAIL-LOUD]", "lead": "Failures page a human.", "body": "Enrichment may fail quietly — a lead without enrichment beats a lost lead. The CRM write may not. Knowing which is which is most of the design work." },
+    { "code": "[ROI-FIRST]", "lead": "I automate what makes money.", "body": "Eight years close to revenue — business development, paid acquisition, lead ops — means I build the workflow that moves the P&L, not the one that demos well." }
+  ],
+  "about": {
+    "photo": "",
+    "paragraphs": [
+      "Most automation specialists learned the tools first and the business later. I did it the other way around — and it shows in everything I ship.",
+      "I spent three years in Dhaka closing ~£90,000 design contracts before I ever wrote a workflow, then moved to London and ran paid acquisition where every pound had to defend itself: ~3× blended ROAS, £700 cost per enrolment against £2,000 of value. So when iOS 14 quietly erased a fifth of our conversion data, I didn't raise a ticket and wait. I learned Meta's Conversions API, wrote the Python integration myself, and got our attribution back. That project changed my career — it's where \"marketer who uses automation\" became \"engineer who understands marketing.\"",
+      "My MSc in Computer Network & System Security is the other half of the story. Automation touches the two things a business can least afford to get wrong — money and customer data — so I build GDPR compliance, secure key handling and auditability into the architecture, not the documentation. The proof is public: both repositories below are tested, documented around their design decisions, and built the way I'd build them for production. Because they were.",
+      "The part that doesn't show up in a repo: I've trained sceptical, non-technical teams to actually adopt this stuff. Automation that the team works around is just expensive shelf-ware — I build systems people trust, and I bring them along."
+    ],
+    "cred": {
+      "status": "Open to full-time roles — AI / marketing automation, London or remote UK",
+      "education": [
+        "MSc Computer Network & System Security — Hertfordshire",
+        "BSc Business Information Technology — Greenwich"
+      ],
+      "stack": "n8n · Zapier · Make · Python · REST/OAuth · SQL · Meta CAPI · HubSpot · Claude & OpenAI APIs",
+      "base": "London, UK"
+    }
+  },
+  "contact": {
+    "email": "golamrabbani6174@gmail.com",
+    "phone": "+44 7535 421734",
+    "linkedin": "https://linkedin.com/in/golamrabbani93-job"
+  }
+}

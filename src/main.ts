@@ -8,6 +8,7 @@
  */
 import "./styles.css";
 import { config } from "./config";
+import { applyContent } from "./content";
 import { initTypewriter } from "./modules/typewriter";
 import { initAnimations } from "./modules/animations";
 
@@ -62,8 +63,12 @@ function scheduleHeroScene(): void {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  applyConfigLinks();
-  initTypewriter();
-  initAnimations();
-  scheduleHeroScene();
+  // Hydrate from content.json first so the typewriter and GSAP read the
+  // final DOM; if it fails, the page's built-in HTML is already correct.
+  void applyContent().finally(() => {
+    applyConfigLinks();
+    initTypewriter();
+    initAnimations();
+    scheduleHeroScene();
+  });
 });
