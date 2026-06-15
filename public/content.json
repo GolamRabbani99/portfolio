@@ -42,6 +42,40 @@
       "image": ""
     }
   ],
+  "gallery": {
+    "label": "// selected work",
+    "heading": "Selected work",
+    "intro": "A few projects I've shipped. Click any card for the detail.",
+    "items": [
+      {
+        "image": "",
+        "title": "Project one",
+        "summary": "One line on what it did and the result it delivered.",
+        "tags": ["Automation"],
+        "description": "Add the full story here: the problem, what you built, the key decisions, and the measurable outcome. This is what shows when someone opens the card.",
+        "link_url": "",
+        "link_label": ""
+      },
+      {
+        "image": "",
+        "title": "Project two",
+        "summary": "One line on what it did and the result it delivered.",
+        "tags": ["Integration"],
+        "description": "Add the full story here: the problem, what you built, the key decisions, and the measurable outcome. This is what shows when someone opens the card.",
+        "link_url": "",
+        "link_label": ""
+      },
+      {
+        "image": "",
+        "title": "Project three",
+        "summary": "One line on what it did and the result it delivered.",
+        "tags": ["Pipeline"],
+        "description": "Add the full story here: the problem, what you built, the key decisions, and the measurable outcome. This is what shows when someone opens the card.",
+        "link_url": "",
+        "link_label": ""
+      }
+    ]
+  },
   "principles": [
     { "code": "[IDEMPOTENT]", "lead": "Every retry is harmless.", "body": "Deterministic IDs, upserts keyed on stable references — a double-submitted form or a network retry can never create a duplicate contact or inflate a revenue metric." },
     { "code": "[BOUNDARY]", "lead": "PII is hashed where it enters.", "body": "Customer data is normalised and SHA-256 hashed in one audited place; downstream code, payloads, and logs never see plaintext. Data minimisation as architecture, not policy." },

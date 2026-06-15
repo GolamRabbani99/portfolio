@@ -55,6 +55,25 @@ content:
               - { name: text, label: Text, type: string }
           - { name: repo_url, label: Repository URL, type: string }
           - { name: image, label: Screenshot (optional), type: image }
+      - name: gallery
+        label: Selected work (gallery)
+        type: object
+        fields:
+          - { name: label, label: Section label, type: string }
+          - { name: heading, label: Section heading, type: string }
+          - { name: intro, label: Intro line, type: text }
+          - name: items
+            label: Cards
+            type: object
+            list: true
+            fields:
+              - { name: image, label: Screenshot, type: image }
+              - { name: title, label: Title, type: string }
+              - { name: summary, label: Short description (on the card), type: text }
+              - { name: tags, label: Tags, type: string, list: true }
+              - { name: description, label: Full description (in the pop-up), type: text }
+              - { name: link_url, label: Link URL (optional), type: string }
+              - { name: link_label, label: "Link label (e.g. Live, Repo)", type: string }
       - name: principles
         label: Principles
         type: object

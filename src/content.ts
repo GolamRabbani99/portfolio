@@ -23,10 +23,16 @@ interface Project {
 }
 interface Principle { code?: string; lead?: string; body?: string; }
 interface Cred { status?: string; education?: string[]; stack?: string; base?: string; }
+interface GalleryItem {
+  image?: string; title?: string; summary?: string; tags?: string[];
+  description?: string; link_url?: string; link_label?: string;
+}
+interface Gallery { label?: string; heading?: string; intro?: string; items?: GalleryItem[]; }
 interface Content {
   hero?: { eyebrow?: string; heading?: HeadingSeg[]; sub?: string };
   metrics?: Metric[];
   projects?: Project[];
+  gallery?: Gallery;
   principles?: Principle[];
   about?: { photo?: string; paragraphs?: string[]; cred?: Cred };
   contact?: { email?: string; phone?: string; linkedin?: string };
@@ -159,6 +165,78 @@ function renderProjects(projects?: Project[]): void {
   });
 }
 
+function renderGallery(g?: Gallery): void {
+  if (!g) return;
+  setText(document.getElementById("gallery-label"), g.label);
+  setText(document.getElementById("gallery-heading"), g.heading);
+  setText(document.getElementById("gallery-intro"), g.intro);
+  if (!Array.isArray(g.items)) return;
+  const grid = document.getElementById("gallery-grid");
+  if (!grid) return;
+  grid.textContent = "";
+  for (const item of g.items) {
+    const card = document.createElement("article");
+    card.className = "gallery-card reveal";
+    card.tabIndex = 0;
+    card.setAttribute("role", "button");
+    card.setAttribute("aria-label", "View " + (item.title ?? "project"));
+    // detail stashed for the pop-up (read by modules/gallery.ts)
+    card.dataset.title = item.title ?? "";
+    card.dataset.desc = item.description ?? "";
+    card.dataset.image = item.image ? resolveSrc(item.image) : "";
+    card.dataset.tags = JSON.stringify(Array.isArray(item.tags) ? item.tags : []);
+    if (item.link_url) {
+      card.dataset.linkUrl = item.link_url;
+      card.dataset.linkLabel = item.link_label || "Open";
+    }
+
+    if (item.image) {
+      const img = document.createElement("img");
+      img.className = "gallery-thumb";
+      img.loading = "lazy";
+      img.src = resolveSrc(item.image);
+      img.alt = item.title ?? "";
+      card.appendChild(img);
+    } else {
+      const ph = document.createElement("div");
+      ph.className = "gallery-thumb gallery-thumb--empty";
+      ph.setAttribute("aria-hidden", "true");
+      const span = document.createElement("span");
+      span.textContent = "screenshot";
+      ph.appendChild(span);
+      card.appendChild(ph);
+    }
+
+    const body = document.createElement("div");
+    body.className = "gallery-card-body";
+    const h3 = document.createElement("h3");
+    h3.textContent = item.title ?? "";
+    body.appendChild(h3);
+    if (item.summary) {
+      const p = document.createElement("p");
+      p.className = "gallery-summary";
+      p.textContent = item.summary;
+      body.appendChild(p);
+    }
+    if (Array.isArray(item.tags) && item.tags.length) {
+      const tagWrap = document.createElement("div");
+      tagWrap.className = "gallery-tags";
+      for (const t of item.tags) {
+        const s = document.createElement("span");
+        s.textContent = t;
+        tagWrap.appendChild(s);
+      }
+      body.appendChild(tagWrap);
+    }
+    const more = document.createElement("span");
+    more.className = "gallery-more";
+    more.textContent = "View detail →";
+    body.appendChild(more);
+    card.appendChild(body);
+    grid.appendChild(card);
+  }
+}
+
 function renderPrinciples(principles?: Principle[]): void {
   if (!Array.isArray(principles)) return;
   const els = Array.from(document.querySelectorAll<HTMLElement>(".principles .principle"));
@@ -273,6 +351,7 @@ export async function applyContent(): Promise<void> {
   guard(() => renderHero(data.hero));
   guard(() => renderMetrics(data.metrics));
   guard(() => renderProjects(data.projects));
+  guard(() => renderGallery(data.gallery));
   guard(() => renderPrinciples(data.principles));
   guard(() => renderAbout(data.about));
   guard(() => renderContact(data.contact));

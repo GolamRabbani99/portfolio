@@ -26,7 +26,7 @@
   <div class="nav-inner">
     <a class="nav-logo" href="#top">golam<b>@</b>automation:~$</a>
     <ul class="nav-links">
-      <li><a href="#work">work</a></li>
+      <li><a href="#selected-work">work</a></li>
       <li><a href="#principles">principles</a></li>
       <li><a href="#about">about</a></li>
       <li><a href="#contact">contact</a></li>
@@ -46,7 +46,7 @@
       Five years across digital marketing, paid acquisition, and systems security.
     </p>
     <div class="hero-ctas" id="hero-ctas">
-      <a class="btn btn-primary" href="#work">View selected work</a>
+      <a class="btn btn-primary" href="#selected-work">View selected work</a>
       <a class="btn btn-ghost" href="https://github.com/YOUR-USERNAME" target="_blank" rel="noopener">GitHub ↗</a>
     </div>
     <div class="hero-log" id="hero-log" aria-hidden="true">
@@ -71,9 +71,46 @@
   </div>
 </section>
 
+<section id="selected-work">
+  <div class="wrap">
+    <p class="sec-label reveal" id="gallery-label">// selected work</p>
+    <h2 class="reveal" id="gallery-heading">Selected work</h2>
+    <p class="sec-intro reveal" id="gallery-intro">A few projects I've shipped. Click any card for the detail.</p>
+    <div class="gallery-grid" id="gallery-grid">
+      <article class="gallery-card reveal" tabindex="0" role="button" aria-label="View project one">
+        <div class="gallery-thumb gallery-thumb--empty" aria-hidden="true"><span>screenshot</span></div>
+        <div class="gallery-card-body">
+          <h3>Project one</h3>
+          <p class="gallery-summary">One line on what it did and the result it delivered.</p>
+          <div class="gallery-tags"><span>Automation</span></div>
+          <span class="gallery-more">View detail →</span>
+        </div>
+      </article>
+      <article class="gallery-card reveal" tabindex="0" role="button" aria-label="View project two">
+        <div class="gallery-thumb gallery-thumb--empty" aria-hidden="true"><span>screenshot</span></div>
+        <div class="gallery-card-body">
+          <h3>Project two</h3>
+          <p class="gallery-summary">One line on what it did and the result it delivered.</p>
+          <div class="gallery-tags"><span>Integration</span></div>
+          <span class="gallery-more">View detail →</span>
+        </div>
+      </article>
+      <article class="gallery-card reveal" tabindex="0" role="button" aria-label="View project three">
+        <div class="gallery-thumb gallery-thumb--empty" aria-hidden="true"><span>screenshot</span></div>
+        <div class="gallery-card-body">
+          <h3>Project three</h3>
+          <p class="gallery-summary">One line on what it did and the result it delivered.</p>
+          <div class="gallery-tags"><span>Pipeline</span></div>
+          <span class="gallery-more">View detail →</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <section id="work">
   <div class="wrap">
-    <p class="sec-label reveal">// selected work</p>
+    <p class="sec-label reveal">// engineering deep-dives</p>
     <h2 class="reveal">Two systems, one engineering philosophy.</h2>
     <p class="sec-intro reveal">Both repos are public, tested, and documented around the design decisions — not just the code.</p>
     <div class="projects">
@@ -248,6 +285,19 @@
     <span>© 2026 Golam Rabbani · built with three.js + GSAP · <span class="lv-ok">[OK]</span> all systems nominal</span>
   </div>
 </footer>
+<div class="lightbox" id="work-modal" hidden role="dialog" aria-modal="true" aria-labelledby="lb-title">
+  <div class="lightbox-backdrop" data-close></div>
+  <div class="lightbox-panel" role="document">
+    <button class="lightbox-close" type="button" data-close aria-label="Close">✕</button>
+    <img class="lightbox-img" id="lb-img" alt="" hidden>
+    <div class="lightbox-body">
+      <div class="lightbox-tags" id="lb-tags" aria-hidden="true"></div>
+      <h3 id="lb-title"></h3>
+      <p class="lightbox-desc" id="lb-desc"></p>
+      <a class="lightbox-link" id="lb-link" target="_blank" rel="noopener" hidden></a>
+    </div>
+  </div>
+</div>
 <script type="module" src="/src/main.ts"></script>
 </body>
 </html>

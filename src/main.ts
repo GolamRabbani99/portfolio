@@ -11,6 +11,7 @@ import { config } from "./config";
 import { applyContent } from "./content";
 import { initTypewriter } from "./modules/typewriter";
 import { initAnimations } from "./modules/animations";
+import { initGallery } from "./modules/gallery";
 
 /* ---- apply config-driven links (one edit in config.ts updates the site) ---- */
 function applyConfigLinks(): void {
@@ -69,6 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
     applyConfigLinks();
     initTypewriter();
     initAnimations();
+    initGallery();
     scheduleHeroScene();
   });
 });
