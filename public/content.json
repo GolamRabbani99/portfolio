@@ -1,102 +1,102 @@
 {
   "hero": {
-    "eyebrow": "AI AUTOMATION ENGINEER — LONDON",
+    "eyebrow": "AI AUTOMATION ENGINEER · LONDON",
     "heading": [
-      { "text": "Automation you can trust with ", "accent": false },
+      { "text": "Automation you can trust with your ", "accent": false },
       { "text": "money", "accent": true },
-      { "text": " and ", "accent": false },
-      { "text": "customer data", "accent": true },
+      { "text": " and your ", "accent": false },
+      { "text": "customers", "accent": true },
       { "text": ".", "accent": false }
     ],
-    "sub": "I build production workflows in `n8n` and `Python` for marketing and operations — idempotent by design, GDPR-aware by default, and never silently failing. Five years across digital marketing, paid acquisition, and systems security."
+    "sub": "I set up the behind-the-scenes systems that capture every lead, keep your sales numbers accurate, and keep customer data safe — so you stop losing money to dropped enquiries, messy data, and problems you only find out about too late."
   },
   "metrics": [
-    { "count": "20", "prefix": "~", "suffix": "%", "label": "attribution data recovered after iOS 14+ via server-side Meta CAPI integration" },
-    { "count": "3", "prefix": "~", "suffix": "×", "label": "blended ROAS on student-enrolment campaigns (£3–4k/mo spend → ~£10k/mo commission)" },
-    { "count": "700", "prefix": "£", "suffix": "", "label": "cost per enrolment against £2,000 conversion value — profitable acquisition by design" },
-    { "count": "0", "from": "14", "prefix": "", "suffix": "", "label": "duplicate conversions possible — deterministic event IDs make every retry idempotent" }
+    { "count": "20", "prefix": "~", "suffix": "%", "label": "of ad results made visible again after Apple's iOS privacy update hid them" },
+    { "count": "3", "prefix": "~", "suffix": "×", "label": "return on ad spend on campaigns I ran — about £3 back for every £1 spent" },
+    { "count": "700", "prefix": "£", "suffix": "", "label": "to win each new customer, against £2,000 they were worth — profit built in" },
+    { "count": "0", "from": "14", "prefix": "", "suffix": "", "label": "double-counted or duplicate sales in the systems I build — your numbers stay honest" }
   ],
   "projects": [
     {
-      "title": "Meta Conversions API — server-side tracking",
-      "stack": ["Python", "Graph API", "SHA-256", "pytest"],
-      "description": "Production CAPI implementation that recovers conversions lost to iOS privacy changes — built around the two problems example code ignores: double counting and PII custody.",
+      "title": "See which ads actually make you money",
+      "stack": ["Meta CAPI", "Python", "GDPR"],
+      "description": "When Apple's iOS update blocked tracking, businesses lost sight of which ads were really driving sales — and started wasting budget on the wrong ones. I built a system that sends your sales data to Facebook a more reliable way, so you can see what's working again. No sale is ever counted twice, and no customer details are exposed.",
       "decisions": [
-        { "tag": "[DEDUP]", "text": "deterministic event IDs — Pixel + server dedupe, retries can't double-count" },
-        { "tag": "[GDPR]", "text": "hash-at-the-boundary — plaintext PII exists in exactly one audited function" },
-        { "tag": "[RESILIENT]", "text": "exponential backoff on rate limits · PII-safe logging · 10/10 tests passing" }
+        { "tag": "[HONEST NUMBERS]", "text": "the same sale is never counted twice, so you can trust what you see" },
+        { "tag": "[DATA STAYS SAFE]", "text": "customer details are scrambled before they ever leave your system — GDPR-friendly" },
+        { "tag": "[ALWAYS ON]", "text": "keeps working under heavy load and never fails quietly" }
       ],
       "repo_url": "https://github.com/GolamRabbani99/meta-capi-integration",
       "image": ""
     },
     {
-      "title": "n8n lead pipeline — capture to CRM",
-      "stack": ["n8n", "Webhooks", "HubSpot", "Slack"],
-      "description": "Lead intake that's trustworthy, not just automatic: validation and consent gating at the door, idempotent CRM writes, and failures that alert a human instead of vanishing.",
+      "title": "Never lose a lead between your website and your CRM",
+      "stack": ["n8n", "Webhooks", "HubSpot"],
+      "description": "Most businesses lose enquiries to manual copy-paste, typos, or steps that quietly fail. I built an automation that catches every lead from your website, checks the details, records consent, and saves it straight into your CRM. If anything ever goes wrong, it alerts a real person — so you never lose a customer to a silent glitch.",
       "decisions": [
-        { "tag": "[VALIDATE]", "text": "reject bad data with a 400 before it ever touches the CRM" },
-        { "tag": "[CONSENT]", "text": "GDPR consent enforced in the pipeline, timestamp stored for audit" },
-        { "tag": "[NO-SILENCE]", "text": "error branch alerts Slack with a traceable enquiry ID for replay" }
+        { "tag": "[NOTHING LOST]", "text": "every enquiry is captured and saved — no more leads slipping away" },
+        { "tag": "[CONSENT RECORDED]", "text": "GDPR consent is collected and time-stamped automatically" },
+        { "tag": "[YOU GET TOLD]", "text": "if a step fails, you're alerted instantly instead of finding out weeks later" }
       ],
       "repo_url": "https://github.com/GolamRabbani99/n8n-lead-pipline",
       "image": ""
     }
   ],
   "gallery": {
-    "label": "// selected work",
-    "heading": "Selected work",
-    "intro": "A few projects I've shipped. Click any card for the detail.",
+    "label": "// real projects",
+    "heading": "Problems I've solved",
+    "intro": "Real work for real businesses. Click any card to see the problem it solved.",
     "items": [
       {
         "image": "/portfolio/images/meta-capi.png",
-        "title": "Meta Conversions API integration",
-        "summary": "Recovers ad conversions lost to iOS privacy changes — accurately, and without exposing customer data.",
-        "tags": ["Python", "Meta CAPI", "GDPR"],
-        "description": "When iOS 14 broke pixel tracking, ad budgets started flying blind. This production integration sends conversions to Meta server-side, so your attribution survives. It's built around the two things example code ignores: deterministic event IDs so retries can never double-count revenue, and PII hashed at the boundary so plaintext customer data lives in exactly one audited place. Backoff on rate limits, PII-safe logging, 10/10 tests passing.",
+        "title": "See which ads truly make you money",
+        "summary": "Apple's privacy update hid your ad results. This brings them back, so you stop wasting budget on ads that don't sell.",
+        "tags": ["Meta CAPI", "Python", "GDPR"],
+        "description": "The problem: after Apple's iOS privacy update, businesses could no longer see which ads were actually leading to sales — so money went to the wrong campaigns. What I built: a reliable way to send your sales data back to Facebook, so the picture is clear again. The result: smarter ad spend, accurate numbers (no sale counted twice), and customer details kept private the whole way through.",
         "link_url": "https://github.com/GolamRabbani99/meta-capi-integration",
         "link_label": "View repo"
       },
       {
         "image": "/portfolio/images/n8n-pipeline.png",
-        "title": "n8n lead-capture pipeline",
-        "summary": "Turns web leads into trustworthy CRM records — validated, consent-gated, and never silently dropped.",
-        "tags": ["n8n", "Webhooks", "HubSpot"],
-        "description": "A lead-capture workflow for businesses that can't afford to lose an enquiry. Bad data is rejected with a 400 before it ever touches the CRM; GDPR consent is enforced and timestamped for audit; CRM writes are idempotent, so a double-submitted form never creates a duplicate contact. If anything fails, an error branch pages a human on Slack with a traceable enquiry ID for replay — no lead ever vanishes.",
+        "title": "Never lose a website lead again",
+        "summary": "Catches every enquiry from your site and saves it to your CRM automatically — checked, consented, and never dropped.",
+        "tags": ["n8n", "Automation", "HubSpot"],
+        "description": "The problem: enquiries get lost between a website and the CRM — through manual copy-paste, typos, or steps that quietly fail. What I built: an automation that captures each lead, validates it, records GDPR consent, and saves it straight into the CRM. The result: no lead ever slips through, and if something breaks, a real person is alerted immediately — not weeks later.",
         "link_url": "https://github.com/GolamRabbani99/n8n-lead-pipline",
         "link_label": "View repo"
       },
       {
         "image": "/portfolio/images/student-crm.png",
-        "title": "EduFlow — student recruitment CRM",
-        "summary": "A role-based CRM that tracks students from first enquiry to enrolment. Live demo you can click through.",
-        "tags": ["TypeScript", "React", "CRM"],
-        "description": "A recruitment CRM built for education agencies: role-based access for counsellors, managers and admins, a clear pipeline from first enquiry to enrolment, and dashboards that show exactly where students stall. Built with React and a lightweight SQLite backend — with a live demo so a prospect can try it before a single call.",
+        "title": "Track every student from enquiry to enrolment",
+        "summary": "A complete system for education agencies to see where every student is at a glance. Try the live demo yourself.",
+        "tags": ["CRM", "Dashboard", "Live demo"],
+        "description": "The problem: education agencies lose track of students across spreadsheets and inboxes, so applications stall and nobody notices. What I built: a clean CRM that shows every student's stage from first enquiry to enrolment, with clear dashboards and role-based access for the whole team. The result: nothing falls through the cracks — and you can click through the live demo to see exactly how it works.",
         "link_url": "https://golamrabbani99.github.io/student-crm/",
         "link_label": "Live demo"
       }
     ]
   },
   "principles": [
-    { "code": "[IDEMPOTENT]", "lead": "Every retry is harmless.", "body": "Deterministic IDs, upserts keyed on stable references — a double-submitted form or a network retry can never create a duplicate contact or inflate a revenue metric." },
-    { "code": "[BOUNDARY]", "lead": "PII is hashed where it enters.", "body": "Customer data is normalised and SHA-256 hashed in one audited place; downstream code, payloads, and logs never see plaintext. Data minimisation as architecture, not policy." },
-    { "code": "[FAIL-LOUD]", "lead": "Failures page a human.", "body": "Enrichment may fail quietly — a lead without enrichment beats a lost lead. The CRM write may not. Knowing which is which is most of the design work." },
-    { "code": "[ROI-FIRST]", "lead": "I automate what makes money.", "body": "Eight years close to revenue — business development, paid acquisition, lead ops — means I build the workflow that moves the P&L, not the one that demos well." }
+    { "code": "[NO DUPLICATES]", "lead": "Every action is safe to repeat.", "body": "If a form is submitted twice or the system retries, you'll never end up with duplicate contacts or double-counted sales. Your data stays clean and your numbers stay honest." },
+    { "code": "[DATA STAYS SAFE]", "lead": "Customer data is protected from the start.", "body": "Personal details are locked down the moment they come in, so they're never left exposed or passed around carelessly. Privacy is built in from day one, which keeps you on the right side of GDPR." },
+    { "code": "[NO SILENT FAILURES]", "lead": "If something breaks, you'll know.", "body": "When a step fails, a real person is alerted straight away — so it becomes a five-minute fix, not a lost customer or a gap in your data you discover weeks later." },
+    { "code": "[FOCUSED ON RESULTS]", "lead": "I automate what makes you money.", "body": "I spent years close to sales and marketing, so I build the systems that move your bottom line — not the ones that just look clever. Every automation has to earn its place." }
   ],
   "about": {
     "photo": "",
     "paragraphs": [
-      "Most automation specialists learned the tools first and the business later. I did it the other way around — and it shows in everything I ship.",
-      "I spent three years in Dhaka closing ~£90,000 design contracts before I ever wrote a workflow, then moved to London and ran paid acquisition where every pound had to defend itself: ~3× blended ROAS, £700 cost per enrolment against £2,000 of value. So when iOS 14 quietly erased a fifth of our conversion data, I didn't raise a ticket and wait. I learned Meta's Conversions API, wrote the Python integration myself, and got our attribution back. That project changed my career — it's where \"marketer who uses automation\" became \"engineer who understands marketing.\"",
-      "My MSc in Computer Network & System Security is the other half of the story. Automation touches the two things a business can least afford to get wrong — money and customer data — so I build GDPR compliance, secure key handling and auditability into the architecture, not the documentation. The proof is public: both repositories below are tested, documented around their design decisions, and built the way I'd build them for production. Because they were.",
-      "The part that doesn't show up in a repo: I've trained sceptical, non-technical teams to actually adopt this stuff. Automation that the team works around is just expensive shelf-ware — I build systems people trust, and I bring them along."
+      "Most tech people learn the tools first and the business later. I did it the other way round — I spent years running marketing and sales before I built a single system. So I start with your problem, not the technology.",
+      "When Apple's iOS update wiped out a big chunk of our ad data, I didn't just complain and wait. I taught myself the fix, built it, and got our results back. That's how I work: I find what's quietly costing you money, and I solve it.",
+      "I also hold a Master's in computer security. Automation usually touches the two things a business can't afford to get wrong — money and customer data — so I build everything to be safe, private, and reliable from the start.",
+      "And because I've trained non-technical teams before, I make sure what I build is something your people will actually use — not a complicated tool that gathers dust."
     ],
     "cred": {
-      "status": "Open to full-time roles — AI / marketing automation, London or remote UK",
+      "status": "Open to full-time roles and freelance projects — automation for marketing & operations, London or remote UK",
       "education": [
-        "MSc Computer Network & System Security — Hertfordshire",
-        "BSc Business Information Technology — Greenwich"
+        "MSc Computer Network & System Security — University of Hertfordshire",
+        "BSc Business Information Technology — University of Greenwich"
       ],
-      "stack": "n8n · Zapier · Make · Python · REST/OAuth · SQL · Meta CAPI · HubSpot · Claude & OpenAI APIs",
+      "stack": "n8n · Zapier · Make · Python · Meta Ads · HubSpot · SQL · Claude & OpenAI",
       "base": "London, UK"
     }
   },

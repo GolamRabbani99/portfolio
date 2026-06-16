@@ -8,10 +8,10 @@ interface LogMessage {
 }
 
 const EXTRA_LINES: LogMessage[] = [
-  { tag: "[OK]", level: "lv-ok", text: "[OK] retry idempotent · event_id stable · count unchanged" },
-  { tag: "[INFO]", level: "lv-info", text: "[INFO] pii hashed at boundary · plaintext=0 downstream" },
-  { tag: "[OK]", level: "lv-ok", text: "[OK] roas pipeline nominal · cpa £700 vs ltv £2,000" },
-  { tag: "[ALERT]", level: "lv-warn", text: "[ALERT] crm write failed → human paged · enq replayable" },
+  { tag: "[OK]", level: "lv-ok", text: "[OK] another lead saved · no duplicates · numbers stay clean" },
+  { tag: "[INFO]", level: "lv-info", text: "[INFO] customer data kept private · safe by default" },
+  { tag: "[OK]", level: "lv-ok", text: "[OK] ad results tracked accurately · budget well spent" },
+  { tag: "[ALERT]", level: "lv-warn", text: "[ALERT] a problem came up · a human was alerted instantly" },
 ];
 
 // Full escape: these values feed an innerHTML sink, including a quoted
