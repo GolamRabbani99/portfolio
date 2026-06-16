@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--
+  CSP is also set as a real HTTP header via public/_headers (Netlify/Cloudflare)
+  and vercel.json (Vercel). GitHub Pages — the current deploy target — ignores
+  those, so this meta tag guarantees the policy is enforced on every host.
+  (frame-ancestors / X-Frame-Options can't be set via meta; they remain in the
+  header files for platforms that honour them.)
+-->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Golam Rabbani — AI Automation Engineer</title>
+<meta name="description" content="AI Automation Engineer in London. I build automation you can trust with money and customer data — n8n, Python, Meta CAPI, GDPR-aware pipelines.">
+<meta property="og:title" content="Golam Rabbani — AI Automation Engineer">
+<meta property="og:description" content="Automation you can trust with money and customer data. n8n · Python · Meta CAPI · GDPR-aware pipelines.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0B1220">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/portfolio/assets/index-C9NXgFVg.js"></script>
+  <link rel="stylesheet" crossorigin href="/portfolio/assets/index-B6VkfGjz.css">
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="#top">golam<b>@</b>automation:~$</a>
+    <ul class="nav-links">
+      <li><a href="#selected-work">work</a></li>
+      <li><a href="#principles">principles</a></li>
+      <li><a href="#about">about</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header id="top">
+  <canvas id="flow-canvas" aria-hidden="true"></canvas>
+  <div class="hero-veil" aria-hidden="true"></div>
+  <div class="wrap hero-content">
+    <p class="eyebrow" id="hero-eyebrow">AI AUTOMATION ENGINEER — LONDON</p>
+    <h1 id="hero-h1">Automation you can trust with <span class="accent">money</span> and <span class="accent">customer data</span>.</h1>
+    <p class="hero-sub" id="hero-sub">
+      I build production workflows in <code>n8n</code> and <code>Python</code> for marketing and operations —
+      idempotent by design, GDPR-aware by default, and never silently failing.
+      Five years across digital marketing, paid acquisition, and systems security.
+    </p>
+    <div class="hero-ctas" id="hero-ctas">
+      <a class="btn btn-primary" href="#selected-work">View selected work</a>
+      <a class="btn btn-ghost" href="https://github.com/YOUR-USERNAME" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+    <div class="hero-log" id="hero-log" aria-hidden="true">
+      <span data-line="[OK] new lead captured · saved to your CRM · nothing lost" data-level="lv-ok" data-tag="[OK]"></span>
+      <span data-line="[INFO] sale tracked correctly · counted once, not twice" data-level="lv-info" data-tag="[INFO]"></span>
+      <span data-line="[ALERT] a step failed · you were notified right away" data-level="lv-warn" data-tag="[ALERT]"></span>
+    </div>
+  </div>
+</header>
+
+<section id="results">
+  <div class="wrap">
+    <p class="sec-label reveal">// real results</p>
+    <h2 class="reveal">Real results, in plain numbers.</h2>
+    <p class="sec-intro reveal">Every number below comes from real work for real businesses — no vanity metrics, just outcomes you'd care about.</p>
+    <div class="metrics">
+      <div class="metric reveal"><div class="num"><em data-count="20" data-prefix="~" data-suffix="%">~20%</em></div><div class="lbl">attribution data recovered after iOS 14+ via server-side Meta CAPI integration</div></div>
+      <div class="metric reveal"><div class="num"><em data-count="3" data-prefix="~" data-suffix="×">~3×</em></div><div class="lbl">blended ROAS on student-enrolment campaigns (£3–4k/mo spend → ~£10k/mo commission)</div></div>
+      <div class="metric reveal"><div class="num"><em data-count="700" data-prefix="£" data-suffix="">£700</em></div><div class="lbl">cost per enrolment against £2,000 conversion value — profitable acquisition by design</div></div>
+      <div class="metric reveal"><div class="num"><em data-count="0" data-from="14" data-prefix="" data-suffix="">0</em></div><div class="lbl">duplicate conversions possible — deterministic event IDs make every retry idempotent</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="selected-work">
+  <div class="wrap">
+    <p class="sec-label reveal" id="gallery-label">// selected work</p>
+    <h2 class="reveal" id="gallery-heading">Selected work</h2>
+    <p class="sec-intro reveal" id="gallery-intro">A few projects I've shipped. Click any card for the detail.</p>
+    <div class="gallery-grid" id="gallery-grid">
+      <article class="gallery-card reveal" tabindex="0" role="button" aria-label="View project one">
+        <div class="gallery-thumb gallery-thumb--empty" aria-hidden="true"><span>screenshot</span></div>
+        <div class="gallery-card-body">
+          <h3>Project one</h3>
+          <p class="gallery-summary">One line on what it did and the result it delivered.</p>
+          <div class="gallery-tags"><span>Automation</span></div>
+          <span class="gallery-more">View detail →</span>
+        </div>
+      </article>
+      <article class="gallery-card reveal" tabindex="0" role="button" aria-label="View project two">
+        <div class="gallery-thumb gallery-thumb--empty" aria-hidden="true"><span>screenshot</span></div>
+        <div class="gallery-card-body">
+          <h3>Project two</h3>
+          <p class="gallery-summary">One line on what it did and the result it delivered.</p>
+          <div class="gallery-tags"><span>Integration</span></div>
+          <span class="gallery-more">View detail →</span>
+        </div>
+      </article>
+      <article class="gallery-card reveal" tabindex="0" role="button" aria-label="View project three">
+        <div class="gallery-thumb gallery-thumb--empty" aria-hidden="true"><span>screenshot</span></div>
+        <div class="gallery-card-body">
+          <h3>Project three</h3>
+          <p class="gallery-summary">One line on what it did and the result it delivered.</p>
+          <div class="gallery-tags"><span>Pipeline</span></div>
+          <span class="gallery-more">View detail →</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <p class="sec-label reveal">// a closer look</p>
+    <h2 class="reveal">Two problems I solved — explained simply.</h2>
+    <p class="sec-intro reveal">Here's the business problem behind each one, in plain English — not just the code.</p>
+    <div class="projects">
+
+      <article class="project reveal">
+        <h3>Meta Conversions API — server-side tracking</h3>
+        <div class="stack"><span>Python</span><span>Graph API</span><span>SHA-256</span><span>pytest</span></div>
+        <p>Production CAPI implementation that recovers conversions lost to iOS privacy changes — built around the two problems example code ignores: double counting and PII custody.</p>
+        <ul class="decisions">
+          <li><span class="tag">[DEDUP]</span> deterministic event IDs — Pixel + server dedupe, retries can't double-count</li>
+          <li><span class="tag">[GDPR]</span> hash-at-the-boundary — plaintext PII exists in exactly one audited function</li>
+          <li><span class="tag">[RESILIENT]</span> exponential backoff on rate limits · PII-safe logging · 10/10 tests passing</li>
+        </ul>
+        <div class="links">
+          <a href="https://github.com/YOUR-USERNAME/meta-capi-integration" target="_blank" rel="noopener">Repository ↗</a>
+          <a href="#contact">Walkthrough video →</a>
+        </div>
+      </article>
+
+      <article class="project reveal">
+        <h3>n8n lead pipeline — capture to CRM</h3>
+        <div class="stack"><span>n8n</span><span>Webhooks</span><span>HubSpot</span><span>Slack</span></div>
+        <p>Lead intake that's trustworthy, not just automatic: validation and consent gating at the door, idempotent CRM writes, and failures that alert a human instead of vanishing.</p>
+        <ul class="decisions">
+          <li><span class="tag">[VALIDATE]</span> reject bad data with a 400 before it ever touches the CRM</li>
+          <li><span class="tag">[CONSENT]</span> GDPR consent enforced in the pipeline, timestamp stored for audit</li>
+          <li><span class="tag">[NO-SILENCE]</span> error branch alerts Slack with a traceable enquiry ID for replay</li>
+        </ul>
+        <div class="links">
+          <a href="https://github.com/YOUR-USERNAME/n8n-lead-pipline" target="_blank" rel="noopener">Repository ↗</a>
+          <a href="#contact">Walkthrough video →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="principles">
+  <div class="wrap">
+    <p class="sec-label reveal">// how i work</p>
+    <h2 class="reveal">Most automation breaks quietly. Mine doesn't.</h2>
+    <div class="principles-grid">
+      <div class="principles">
+      <div class="principle reveal">
+        <span class="code">[IDEMPOTENT]</span>
+        <p><b>Every retry is harmless.</b> Deterministic IDs, upserts keyed on stable references — a double-submitted form or a network retry can never create a duplicate contact or inflate a revenue metric.</p>
+      </div>
+      <div class="principle reveal">
+        <span class="code">[BOUNDARY]</span>
+        <p><b>PII is hashed where it enters.</b> Customer data is normalised and SHA-256 hashed in one audited place; downstream code, payloads, and logs never see plaintext. Data minimisation as architecture, not policy.</p>
+      </div>
+      <div class="principle reveal">
+        <span class="code">[FAIL-LOUD]</span>
+        <p><b>Failures page a human.</b> Enrichment may fail quietly — a lead without enrichment beats a lost lead. The CRM write may not. Knowing which is which is most of the design work.</p>
+      </div>
+      <div class="principle reveal">
+        <span class="code">[ROI-FIRST]</span>
+        <p><b>I automate what makes money.</b> Eight years close to revenue — business development, paid acquisition, lead ops — means I build the workflow that moves the P&amp;L, not the one that demos well.</p>
+      </div>
+      </div>
+
+      <div class="robot-stage reveal" aria-hidden="true">
+        <svg viewBox="0 0 320 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Robot working at a terminal">
+          <!-- floor shadow -->
+          <ellipse class="rb-shadow" cx="160" cy="318" rx="96" ry="10" fill="#000" opacity=".35"/>
+
+          <!-- desk -->
+          <rect x="48" y="266" width="224" height="8" rx="4" fill="#1D2C49"/>
+          <rect x="64" y="274" width="10" height="40" rx="3" fill="#16243D"/>
+          <rect x="246" y="274" width="10" height="40" rx="3" fill="#16243D"/>
+
+          <!-- coffee mug + steam -->
+          <g>
+            <rect x="236" y="240" width="22" height="26" rx="4" fill="#111C30" stroke="#1D2C49" stroke-width="2"/>
+            <path d="M258 246 q10 2 0 14" fill="none" stroke="#1D2C49" stroke-width="3" stroke-linecap="round"/>
+            <path class="rb-steam"  d="M243 234 q3 -5 0 -10" fill="none" stroke="#5ED3F0" stroke-width="2" stroke-linecap="round" opacity="0"/>
+            <path class="rb-steam rb-steam2" d="M251 234 q-3 -5 0 -10" fill="none" stroke="#5ED3F0" stroke-width="2" stroke-linecap="round" opacity="0"/>
+          </g>
+
+          <!-- terminal screen -->
+          <g>
+            <rect x="78" y="196" width="116" height="74" rx="8" fill="#0D1830" stroke="#1D2C49" stroke-width="2.5"/>
+            <rect x="78" y="196" width="116" height="16" rx="8" fill="#16243D"/>
+            <circle cx="90" cy="204" r="3" fill="#FFB454"/>
+            <circle cx="100" cy="204" r="3" fill="#5ED3F0"/>
+            <circle cx="110" cy="204" r="3" fill="#7BE0AD"/>
+            <rect class="rb-line"          x="88" y="222" width="74" height="5" rx="2.5" fill="#5ED3F0"/>
+            <rect class="rb-line rb-line2" x="88" y="234" width="92" height="5" rx="2.5" fill="#7BE0AD"/>
+            <rect class="rb-line rb-line3" x="88" y="246" width="58" height="5" rx="2.5" fill="#FFB454"/>
+          </g>
+
+          <!-- robot (floats as one group) -->
+          <g class="rb-float">
+            <!-- antenna -->
+            <line x1="160" y1="96" x2="160" y2="76" stroke="#1D2C49" stroke-width="4" stroke-linecap="round"/>
+            <circle class="rb-antenna-tip" cx="160" cy="70" r="7" fill="#FFB454"/>
+
+            <!-- head -->
+            <g class="rb-head">
+              <rect x="120" y="92" width="80" height="62" rx="18" fill="#111C30" stroke="#1D2C49" stroke-width="3"/>
+              <rect x="132" y="106" width="56" height="30" rx="12" fill="#0D1830"/>
+              <circle class="rb-eye" cx="150" cy="121" r="6.5" fill="#5ED3F0"/>
+              <circle class="rb-eye" cx="170" cy="121" r="6.5" fill="#5ED3F0"/>
+              <!-- ear caps -->
+              <rect x="112" y="112" width="10" height="20" rx="5" fill="#1D2C49"/>
+              <rect x="198" y="112" width="10" height="20" rx="5" fill="#1D2C49"/>
+            </g>
+
+            <!-- body -->
+            <rect x="128" y="158" width="64" height="70" rx="18" fill="#111C30" stroke="#1D2C49" stroke-width="3"/>
+            <circle cx="160" cy="186" r="11" fill="#0D1830" stroke="#1D2C49" stroke-width="2"/>
+            <circle cx="160" cy="186" r="4.5" fill="#FFB454"/>
+
+            <!-- arms reaching to the keyboard -->
+            <path class="rb-arm-l" d="M132 196 Q108 214 116 252" fill="none" stroke="#1D2C49" stroke-width="9" stroke-linecap="round"/>
+            <path class="rb-arm-r" d="M188 196 Q212 214 204 252" fill="none" stroke="#1D2C49" stroke-width="9" stroke-linecap="round"/>
+            <circle class="rb-arm-l" cx="118" cy="254" r="7" fill="#111C30" stroke="#1D2C49" stroke-width="2.5"/>
+            <circle class="rb-arm-r" cx="202" cy="254" r="7" fill="#111C30" stroke="#1D2C49" stroke-width="2.5"/>
+          </g>
+
+          <!-- keyboard -->
+          <rect x="104" y="256" width="112" height="10" rx="5" fill="#16243D" stroke="#1D2C49" stroke-width="2"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <p class="sec-label reveal">// about</p>
+    <h2 class="reveal">I learn your business first. Then I build the fix.</h2>
+    <div class="about-grid">
+      <div class="reveal">
+        <p>Most automation specialists learned the tools first and the business later. I did it the other way around — and it shows in everything I ship.</p>
+        <p>I spent three years in Dhaka closing ~£90,000 design contracts before I ever wrote a workflow, then moved to London and ran paid acquisition where every pound had to defend itself: ~3× blended ROAS, £700 cost per enrolment against £2,000 of value. So when iOS 14 quietly erased a fifth of our conversion data, I didn't raise a ticket and wait. I learned Meta's Conversions API, wrote the Python integration myself, and got our attribution back. That project changed my career — it's where "marketer who uses automation" became "engineer who understands marketing."</p>
+        <p>My MSc in Computer Network &amp; System Security is the other half of the story. Automation touches the two things a business can least afford to get wrong — money and customer data — so I build GDPR compliance, secure key handling and auditability into the architecture, not the documentation. The proof is public: both repositories below are tested, documented around their design decisions, and built the way I'd build them for production. Because they were.</p>
+        <p>The part that doesn't show up in a repo: I've trained sceptical, non-technical teams to actually adopt this stuff. Automation that the team works around is just expensive shelf-ware — I build systems people trust, and I bring them along.</p>
+      </div>
+      <div class="cred reveal">
+        <span class="k">status:</span><br>
+        <b>Open to full-time roles</b> — AI / marketing automation, London or remote UK<br><br>
+        <span class="k">education:</span><br>
+        <b>MSc</b> Computer Network &amp; System Security — Hertfordshire<br>
+        <b>BSc</b> Business Information Technology — Greenwich<br><br>
+        <span class="k">stack:</span><br>
+        n8n · Zapier · Make · Python · REST/OAuth · SQL · Meta CAPI · HubSpot · Claude &amp; OpenAI APIs<br><br>
+        <span class="k">base:</span><br>
+        London, UK
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <p class="sec-label reveal">// contact</p>
+    <h2 class="reveal">Got a task that should run itself?</h2>
+    <p class="reveal" data-gap>One quick chat is usually enough to know if automation will pay for itself.</p>
+    <a class="big-link reveal" href="mailto:golamrabbani6174@gmail.com">golamrabbani6174@gmail.com</a>
+    <div class="contact-meta reveal">
+      <a href="https://linkedin.com/in/golamrabbani93-job" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://github.com/YOUR-USERNAME" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="tel:+447535421734">+44 7535 421734</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Golam Rabbani · built with three.js + GSAP · <span class="lv-ok">[OK]</span> all systems nominal</span>
+  </div>
+</footer>
+<div class="lightbox" id="work-modal" hidden role="dialog" aria-modal="true" aria-labelledby="lb-title">
+  <div class="lightbox-backdrop" data-close></div>
+  <div class="lightbox-panel" role="document">
+    <button class="lightbox-close" type="button" data-close aria-label="Close">✕</button>
+    <img class="lightbox-img" id="lb-img" alt="" hidden>
+    <div class="lightbox-body">
+      <div class="lightbox-tags" id="lb-tags" aria-hidden="true"></div>
+      <h3 id="lb-title"></h3>
+      <p class="lightbox-desc" id="lb-desc"></p>
+      <a class="lightbox-link" id="lb-link" target="_blank" rel="noopener" hidden></a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

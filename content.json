@@ -1,0 +1,108 @@
+{
+  "hero": {
+    "eyebrow": "AI AUTOMATION ENGINEER · LONDON",
+    "heading": [
+      { "text": "Automation you can trust with your ", "accent": false },
+      { "text": "money", "accent": true },
+      { "text": " and your ", "accent": false },
+      { "text": "customers", "accent": true },
+      { "text": ".", "accent": false }
+    ],
+    "sub": "I set up the behind-the-scenes systems that capture every lead, keep your sales numbers accurate, and keep customer data safe — so you stop losing money to dropped enquiries, messy data, and problems you only find out about too late."
+  },
+  "metrics": [
+    { "count": "20", "prefix": "~", "suffix": "%", "label": "of ad results made visible again after Apple's iOS privacy update hid them" },
+    { "count": "3", "prefix": "~", "suffix": "×", "label": "return on ad spend on campaigns I ran — about £3 back for every £1 spent" },
+    { "count": "700", "prefix": "£", "suffix": "", "label": "to win each new customer, against £2,000 they were worth — profit built in" },
+    { "count": "0", "from": "14", "prefix": "", "suffix": "", "label": "double-counted or duplicate sales in the systems I build — your numbers stay honest" }
+  ],
+  "projects": [
+    {
+      "title": "See which ads actually make you money",
+      "stack": ["Meta CAPI", "Python", "GDPR"],
+      "description": "When Apple's iOS update blocked tracking, businesses lost sight of which ads were really driving sales — and started wasting budget on the wrong ones. I built a system that sends your sales data to Facebook a more reliable way, so you can see what's working again. No sale is ever counted twice, and no customer details are exposed.",
+      "decisions": [
+        { "tag": "[HONEST NUMBERS]", "text": "the same sale is never counted twice, so you can trust what you see" },
+        { "tag": "[DATA STAYS SAFE]", "text": "customer details are scrambled before they ever leave your system — GDPR-friendly" },
+        { "tag": "[ALWAYS ON]", "text": "keeps working under heavy load and never fails quietly" }
+      ],
+      "repo_url": "https://github.com/GolamRabbani99/meta-capi-integration",
+      "image": ""
+    },
+    {
+      "title": "Never lose a lead between your website and your CRM",
+      "stack": ["n8n", "Webhooks", "HubSpot"],
+      "description": "Most businesses lose enquiries to manual copy-paste, typos, or steps that quietly fail. I built an automation that catches every lead from your website, checks the details, records consent, and saves it straight into your CRM. If anything ever goes wrong, it alerts a real person — so you never lose a customer to a silent glitch.",
+      "decisions": [
+        { "tag": "[NOTHING LOST]", "text": "every enquiry is captured and saved — no more leads slipping away" },
+        { "tag": "[CONSENT RECORDED]", "text": "GDPR consent is collected and time-stamped automatically" },
+        { "tag": "[YOU GET TOLD]", "text": "if a step fails, you're alerted instantly instead of finding out weeks later" }
+      ],
+      "repo_url": "https://github.com/GolamRabbani99/n8n-lead-pipline",
+      "image": ""
+    }
+  ],
+  "gallery": {
+    "label": "// real projects",
+    "heading": "Problems I've solved",
+    "intro": "Real work for real businesses. Click any card to see the problem it solved.",
+    "items": [
+      {
+        "image": "/portfolio/images/meta-capi.png",
+        "title": "See which ads truly make you money",
+        "summary": "Apple's privacy update hid your ad results. This brings them back, so you stop wasting budget on ads that don't sell.",
+        "tags": ["Meta CAPI", "Python", "GDPR"],
+        "description": "The problem: after Apple's iOS privacy update, businesses could no longer see which ads were actually leading to sales — so money went to the wrong campaigns. What I built: a reliable way to send your sales data back to Facebook, so the picture is clear again. The result: smarter ad spend, accurate numbers (no sale counted twice), and customer details kept private the whole way through.",
+        "link_url": "https://github.com/GolamRabbani99/meta-capi-integration",
+        "link_label": "View repo"
+      },
+      {
+        "image": "/portfolio/images/n8n-pipeline.png",
+        "title": "Never lose a website lead again",
+        "summary": "Catches every enquiry from your site and saves it to your CRM automatically — checked, consented, and never dropped.",
+        "tags": ["n8n", "Automation", "HubSpot"],
+        "description": "The problem: enquiries get lost between a website and the CRM — through manual copy-paste, typos, or steps that quietly fail. What I built: an automation that captures each lead, validates it, records GDPR consent, and saves it straight into the CRM. The result: no lead ever slips through, and if something breaks, a real person is alerted immediately — not weeks later.",
+        "link_url": "https://github.com/GolamRabbani99/n8n-lead-pipline",
+        "link_label": "View repo"
+      },
+      {
+        "image": "/portfolio/images/student-crm.png",
+        "title": "Track every student from enquiry to enrolment",
+        "summary": "A complete system for education agencies to see where every student is at a glance. Try the live demo yourself.",
+        "tags": ["CRM", "Dashboard", "Live demo"],
+        "description": "The problem: education agencies lose track of students across spreadsheets and inboxes, so applications stall and nobody notices. What I built: a clean CRM that shows every student's stage from first enquiry to enrolment, with clear dashboards and role-based access for the whole team. The result: nothing falls through the cracks — and you can click through the live demo to see exactly how it works.",
+        "link_url": "https://golamrabbani99.github.io/student-crm/",
+        "link_label": "Live demo"
+      }
+    ]
+  },
+  "principles": [
+    { "code": "[NO DUPLICATES]", "lead": "Every action is safe to repeat.", "body": "If a form is submitted twice or the system retries, you'll never end up with duplicate contacts or double-counted sales. Your data stays clean and your numbers stay honest." },
+    { "code": "[DATA STAYS SAFE]", "lead": "Customer data is protected from the start.", "body": "Personal details are locked down the moment they come in, so they're never left exposed or passed around carelessly. Privacy is built in from day one, which keeps you on the right side of GDPR." },
+    { "code": "[NO SILENT FAILURES]", "lead": "If something breaks, you'll know.", "body": "When a step fails, a real person is alerted straight away — so it becomes a five-minute fix, not a lost customer or a gap in your data you discover weeks later." },
+    { "code": "[FOCUSED ON RESULTS]", "lead": "I automate what makes you money.", "body": "I spent years close to sales and marketing, so I build the systems that move your bottom line — not the ones that just look clever. Every automation has to earn its place." }
+  ],
+  "about": {
+    "photo": "",
+    "paragraphs": [
+      "Most tech people learn the tools first and the business later. I did it the other way round — I spent years running marketing and sales before I built a single system. So I start with your problem, not the technology.",
+      "When Apple's iOS update wiped out a big chunk of our ad data, I didn't just complain and wait. I taught myself the fix, built it, and got our results back. That's how I work: I find what's quietly costing you money, and I solve it.",
+      "I also hold a Master's in computer security. Automation usually touches the two things a business can't afford to get wrong — money and customer data — so I build everything to be safe, private, and reliable from the start.",
+      "And because I've trained non-technical teams before, I make sure what I build is something your people will actually use — not a complicated tool that gathers dust."
+    ],
+    "cred": {
+      "status": "Open to full-time roles and freelance projects — automation for marketing & operations, London or remote UK",
+      "education": [
+        "MSc Computer Network & System Security — University of Hertfordshire",
+        "BSc Business Information Technology — University of Greenwich"
+      ],
+      "stack": "n8n · Zapier · Make · Python · Meta Ads · HubSpot · SQL · Claude & OpenAI",
+      "base": "London, UK"
+    }
+  },
+  "contact": {
+    "email": "golamrabbani6174@gmail.com",
+    "phone": "+44 7535 421734",
+    "linkedin": "https://linkedin.com/in/golamrabbani93-job"
+  }
+}
